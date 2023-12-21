@@ -200,7 +200,7 @@ i32 leanloader_dispose(leanloader_image_info* info) {
 #include <stdio.h>
 int main(int argc, char *argv[]) {
     leanloader_image_info info;
-    info.name = u"leanloader.png";
+    info.name = u"test\\leanloader.png";
     leanloader_load(&info);
     leanloader_dispose(&info);
 }
