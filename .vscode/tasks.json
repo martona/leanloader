@@ -1,0 +1,35 @@
+{
+    "tasks": [
+            {
+                "type": "cppbuild",
+                "label": "build leanloader.exe",
+                "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+                "args": [
+                    "-march=native",
+                    " -m64",
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "${workspaceFolder}\\leanloader.c",
+                    "-o",
+                    "${workspaceFolder}\\leanloader.exe"
+                ],
+                "presentation": {
+                    "clear": true
+                },                
+                "problemMatcher": [
+                    "$gcc"
+                ],
+                "options": {
+                    "cwd": "C:\\msys64\\ucrt64\\bin"
+                },
+                    "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "dependsOn": [
+                ],
+                "detail": ""
+            },
+         ],
+    "version": "2.0.0"
+}
