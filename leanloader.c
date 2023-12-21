@@ -56,10 +56,13 @@ typedef struct {
 
 // definitions for the function types we use
 // kernel:
+#ifndef _BASIC_KERNEL_DEFINED
+#define _BASIC_KERNEL_DEFINED
 typedef ptr (*LoadLibraryA_t)(char *name);
 typedef void (*FreeLibrary_t)(ptr modulehandle);
 typedef ptr (*GlobalAlloc_t)(u32 flags, u32 size);
 typedef u32 (*GlobalFree_t)(ptr ptr);
+#endif
 // gdiplus:
 typedef u32 (*GdipStartup_t)(ptr* token, GdiplusStartupInput* input, ptr output);
 typedef u32 (*GdipShutdown_t)(ptr token);
