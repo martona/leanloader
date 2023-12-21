@@ -1,0 +1,3 @@
+[submodule "submodules/getprocaddress"]
+	path = submodules/getprocaddress
+	url = https://github.com/martona/getprocaddress
