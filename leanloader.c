@@ -99,8 +99,8 @@ static env_t env = {0};
 // an internal function to initialize the "runtime environment"
 static i32 leanloader_env_init() {
     if (env.refcnt == 0) {
-        env.kernel32       = get_kernel32_modulehandle();
-        env.GetProcAddress = get_getprocaddress(env.kernel32);
+        env.kernel32       = gpa_getkernel32();
+        env.GetProcAddress = gpa_getgetprocaddress(env.kernel32);
         env.LoadLibraryA   = env.GetProcAddress(env.kernel32, "LoadLibraryA");
         env.FreeLibrary    = env.GetProcAddress(env.kernel32, "FreeLibrary");
         env.GlobalAlloc    = env.GetProcAddress(env.kernel32, "GlobalAlloc");
